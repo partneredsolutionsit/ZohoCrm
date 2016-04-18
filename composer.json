@@ -1,0 +1,17 @@
+{
+    "name": "partneredsolutionsit/zohocrm",
+    "authors": [
+        {
+            "name": "Charles Laborn",
+            "email": "charles@partneredsolutionsit.com"
+        }
+    ],
+    "require": {
+		"guzzlehttp/guzzle": "~6.0"
+	},
+	"autoload": {
+		"psr-4":	{
+			"PartneredSolutionsIT\\ZohoCrm\\": "src/"
+		}
+	}
+}
