@@ -46,6 +46,7 @@ class ZohoClient
 		$res = $this->client->request('POST', 'https://crm.zoho.com/crm/private/xml/Leads/getRecords', [
 			'form_params' => [
 				'authtoken' => $this->authToken,
+				'scope'		=> 'crmap',
 			]
 		]);		
 		
