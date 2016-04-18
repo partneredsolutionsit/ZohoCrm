@@ -47,7 +47,6 @@ class ZohoClient
 			'form_params' => [
 				'authtoken' => $this->authToken,
 				'scope'		=> 'crmap',
-				'newFormat' => '1',
 			]
 		]);		
 		
