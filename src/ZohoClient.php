@@ -43,7 +43,7 @@ class ZohoClient
 	
 	public function getRecords()
 	{
-		$res = $this->client->request('post', 'https://crm.zoho.com/crm/private/xml/Leads/getRecords', [
+		$res = $this->client->request('post', 'https://crm.zoho.com/crm/private/json/Leads/getRecords', [
 			'form_params' => [
 				'authtoken' => $this->authToken,
 				'scope'		=> 'crmap',
@@ -56,7 +56,7 @@ class ZohoClient
 	
 	public function getMyRecords()
 	{
-		$res = $this->client->request('post', 'https://crm.zoho.com/crm/private/xml/Leads/getMyRecords', [
+		$res = $this->client->request('post', 'https://crm.zoho.com/crm/private/json/Leads/getMyRecords', [
 			'form_params' => [
 				'authtoken' => $this->authToken,
 				'scope'		=> 'crmap',
