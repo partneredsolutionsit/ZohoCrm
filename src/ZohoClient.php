@@ -50,7 +50,7 @@ class ZohoClient
 			]
 		]);		
 		
-		echo $res->getBody();
+		return $res->getBody();
 		
 	}
 	
@@ -63,7 +63,7 @@ class ZohoClient
 			]
 		]);		
 		
-		echo $res->getBody();
+		return $res->getBody();
 		
 	}	
 	
