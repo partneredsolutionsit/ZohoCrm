@@ -47,7 +47,6 @@ class ZohoClient
 			'form_params' => [
 				'authtoken' => $this->authToken,
 				'scope'		=> 'crmap',
-				'selectColumns' => 'All',
 			]
 		]);		
 		
@@ -55,6 +54,18 @@ class ZohoClient
 		
 	}
 	
+	public function getMyRecords()
+	{
+		$res = $this->client->request('post', 'https://crm.zoho.com/crm/private/xml/Leads/getMyRecords', [
+			'form_params' => [
+				'authtoken' => $this->authToken,
+				'scope'		=> 'crmap',
+			]
+		]);		
+		
+		echo $res->getBody();
+		
+	}	
 	
 	protected function call( $command, $parameters, $data = [] )
 	{
