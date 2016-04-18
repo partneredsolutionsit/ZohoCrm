@@ -2,6 +2,8 @@
 
 namespace PartneredSolutionsIT\ZohoCrm;
 
+use GuzzleHttp\Client;
+
 class ZohoClient
 {
     /**
@@ -32,16 +34,29 @@ class ZohoClient
      */
     protected $format;	
 	
-	public function __construct( $authToken, $client, $format = "json" )
+	public function __construct( $authToken, Client $client, $format = "json" )
 	{
 		$this->authToken = $authToken;
 		$this->client = $client;
 		$this->format = $format;
 	}
 	
+	public function getRecords()
+	{
+		$res = $this->client->request('POST', 'https://crm.zoho.com/crm/private/xml/Leads/getRecords', [
+			'form_params' => [
+				'authtoken' => $this->authToken,
+			]
+		]);		
+		
+		dd( $res );
+		
+	}
+	
+	
 	protected function call( $command, $parameters, $data = [] )
 	{
-		
+		dd( $command );
 	}
 
     /**
