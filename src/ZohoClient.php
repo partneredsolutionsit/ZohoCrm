@@ -47,7 +47,7 @@ class ZohoClient
 			'form_params' => [
 				'authtoken' => $this->authToken,
 				'scope'		=> 'crmap',
-				'selectColumns' => 'Leads(Lead Owner,First Name,Last Name,Email,Company,No of Employees,Annual Revenue,Created By,Created Time)',
+				'selectColumns' => 'All',
 			]
 		]);		
 		
