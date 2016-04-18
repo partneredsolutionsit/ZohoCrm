@@ -2,9 +2,7 @@
 
 namespace PartneredSolutionsIT\ZohoCrm;
 
-use GuzzleHttp\Client;
-
-class Client
+class ZohoClient
 {
     /**
      * URL for call request.
@@ -34,7 +32,7 @@ class Client
      */
     protected $format;	
 	
-	public function __construct( $authToken, Client $client, $format = "json" )
+	public function __construct( $authToken, $client, $format = "json" )
 	{
 		$this->authToken = $authToken;
 		$this->client = $client;
