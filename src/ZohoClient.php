@@ -49,7 +49,7 @@ class ZohoClient
 			]
 		]);		
 		
-		dd( $res );
+		echo $res->getBody();
 		
 	}
 	
